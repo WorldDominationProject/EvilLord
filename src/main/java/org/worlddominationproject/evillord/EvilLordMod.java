@@ -2,9 +2,7 @@ package org.worlddominationproject.evillord;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.worlddominationproject.evillord.common.blocks.Blocks;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -27,9 +25,6 @@ public class EvilLordMod {
 	@EventHandler
 	public void preInit(final FMLPreInitializationEvent event) {
 		LOGGER.info("Mod pre initialization {}", event.getSide());
-		LOGGER.info("Registering Handlers");
-		// Register Factories for Blocks and ITems and stuff
-		MinecraftForge.EVENT_BUS.register(new Blocks());
 	}
 
 	@EventHandler
