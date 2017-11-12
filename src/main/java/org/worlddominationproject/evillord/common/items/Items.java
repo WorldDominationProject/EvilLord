@@ -14,6 +14,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
+/**
+ *
+ * @author stranametschty
+ *
+ */
 @Mod.EventBusSubscriber(modid = EvilLordMod.MODID)
 @ObjectHolder(EvilLordMod.MODID)
 public final class Items {
@@ -24,10 +29,11 @@ public final class Items {
 	public static final Item MAGIC_OBSIDIAN = null;
 
 	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) {
+	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		LOGGER.info("Register Items");
 		Block magicObsidian = Blocks.MAGIC_OBSIDIAN;
 		event.getRegistry().register(new ItemBlock(magicObsidian).setRegistryName(magicObsidian.getRegistryName()));
+		EvilLordMod.proxy.initModelResource(Item.getItemFromBlock(magicObsidian));
 	}
 
 }

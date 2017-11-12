@@ -5,6 +5,11 @@ import org.worlddominationproject.evillord.EvilLordMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
+/**
+ * 
+ * @author stranametschty
+ *
+ */
 public class BlockMagicObsidian extends Block {
 
 	public static final String ID = "magic_obsidian";
