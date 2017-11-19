@@ -1,0 +1,11 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": {
+            "model": "evillord:rune_shard"
+        },
+        "inventory": {
+            "model": "evillord:rune_shard"
+        }
+    }
+}

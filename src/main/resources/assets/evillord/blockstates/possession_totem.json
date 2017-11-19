@@ -1,0 +1,11 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": {
+            "model": "evillord:possession_totem"
+        },
+        "inventory": {
+            "model": "evillord:possession_totem"
+        }
+    }
+}

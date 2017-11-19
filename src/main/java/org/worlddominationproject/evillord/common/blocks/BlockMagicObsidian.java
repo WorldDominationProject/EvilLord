@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 /**
- * 
+ *
  * @author stranametschty
  *
  */
@@ -16,10 +16,10 @@ public class BlockMagicObsidian extends Block {
 
 	public BlockMagicObsidian() {
 		super(Material.ROCK);
+		this.setRegistryName(EvilLordMod.MODID, ID);
+		this.setUnlocalizedName("Magic Obsidian");
 		this.setHardness(50.0F);
 		this.setResistance(2000.0F);
-		this.setUnlocalizedName("Magic Obsidian");
-		this.setRegistryName(EvilLordMod.MODID, BlockMagicObsidian.ID);
 	}
 
 }

@@ -1,0 +1,11 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": {
+            "model": "evillord:magic_orb"
+        },
+        "inventory": {
+            "model": "evillord:magic_orb"
+        }
+    }
+}

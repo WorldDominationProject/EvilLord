@@ -13,6 +13,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
+import net.minecraftforge.registries.IForgeRegistry;
 
 /**
  *
@@ -28,12 +29,40 @@ public final class Items {
 	@ObjectHolder(BlockMagicObsidian.ID)
 	public static final Item MAGIC_OBSIDIAN = null;
 
+	@ObjectHolder(ItemEvilHand.ID)
+	public static final Item EVIL_HAND = null;
+
+	@ObjectHolder(ItemMagicOrb.ID)
+	public static final Item MAGIC_ORB = null;
+
+	@ObjectHolder(ItemRuneShard.ID)
+	public static final Item RUNE_SHARD = null;
+
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
-		LOGGER.info("Register Items");
-		Block magicObsidian = Blocks.MAGIC_OBSIDIAN;
-		event.getRegistry().register(new ItemBlock(magicObsidian).setRegistryName(magicObsidian.getRegistryName()));
-		EvilLordMod.proxy.initModelResource(Item.getItemFromBlock(magicObsidian));
+		LOGGER.info("Registering Items");
+
+		IForgeRegistry<Item> itemRegistry = event.getRegistry();
+
+		registerItemBlock(itemRegistry, Blocks.MAGIC_OBSIDIAN);
+		registerItemBlock(itemRegistry, Blocks.EVIL_THRONE);
+		registerItemBlock(itemRegistry, Blocks.WAR_BANNER);
+		registerItemBlock(itemRegistry, Blocks.POSSESSION_TOTEM);
+
+		registerItem(itemRegistry, new ItemEvilHand());
+		registerItem(itemRegistry, new ItemMagicOrb());
+		registerItem(itemRegistry, new ItemRuneShard());
+	}
+
+	private static void registerItemBlock(final IForgeRegistry<Item> registry, final Block block) {
+		Item itemBlock = new ItemBlock(block).setRegistryName(block.getRegistryName());
+		registry.register(itemBlock);
+		EvilLordMod.proxy.initModelResource(itemBlock);
+	}
+
+	private static void registerItem(final IForgeRegistry<Item> registry, final Item item) {
+		registry.register(item);
+		EvilLordMod.proxy.initModelResource(item);
 	}
 
 }
