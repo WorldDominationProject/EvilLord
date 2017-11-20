@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " M ",
+        "MMM",
+        "MMM"
+    ],
+    "key": {
+        "M": {
+            "item": "evillord:magic_obsidian"
+        }
+    },
+    "result": {
+        "item": "evillord:evil_throne"
+    }
+}
