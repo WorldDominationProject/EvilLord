@@ -1,11 +1,24 @@
 {
     "forge_marker": 1,
+    "defaults": {
+        "model": "evillord:evil_throne"
+    },
     "variants": {
-        "normal": {
-            "model": "evillord:evil_throne"
-        },
         "inventory": {
             "model": "evillord:evil_throne"
+        },
+        "facing": {
+            "east": {
+            },
+            "south": {
+                "y": 90
+            },
+            "west": {
+                "y": 180
+            },
+            "north": {
+                "y": 270
+            }
         }
     }
 }
